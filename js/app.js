@@ -2,6 +2,12 @@ var data = [{product: "Finger Toothbrush", description: "A helping hand to a nic
 
 
 for(var i=0; i<data.length; i++){
+data[i].pic=[2,1,3,4,5,6]
+    console.log(data[i].pic)
+}
+
+
+for(var i=0; i<data.length; i++){
     var itemVar = document.createElement('div');
     itemVar.className = 'item';
     itemVar.innerHTML = data[i].product;
