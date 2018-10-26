@@ -2,28 +2,98 @@ var data = [{product: "Finger Toothbrush", description: "A helping hand to a nic
 
 
 for(var i=0; i<data.length; i++){
-    var boughtBox = document.createElement('div');
-    boughtBox.className= 'stuff';
-    boughtBox.innerHTML= data[i].product;
-    boughtBox.addEventListener('click', showMe);
-    var aboutBox = document.createElement('div');
-    aboutBox.className = 'aboutIt'
-    var priceBox = document.createElement('div');
-    priceBox.className = 'dollar'
-    priceBox.innerHTML = data[i].price;
-    aboutBox.innerHTML = data[i].description;
-    order.appendChild(boughtBox);order.appendChild(aboutBox);
-    order.appendChild(priceBox);
+    var itemVar = document.createElement('div');
+    itemVar.className = 'item';
+    itemVar.innerHTML = data[i].product;
+    orderBox.appendChild(itemVar);
+
 }
+
+var go = document.getElementsByClassName('item');
+
+// console.log(go);
+
+for(var i=0; i<data.length; i++){
+    var aboutVar = document.createElement('div');
+    aboutVar.className= 'about';
+    aboutVar.innerHTML = data[i].description;
+    // console.log(aboutVar)
+    go[i].appendChild(aboutVar);
+}
+
+for(var i=0; i<data.length; i++){
+    var pVar= document.createElement('div');
+    pVar.className= 'howMuch';
+    pVar.innerHTML=data[i].price;
+   go[i].appendChild(pVar);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // for(var i=0; i<data.length; i++){
-//     var aboutBox = document.createElement('div');
-//     aboutBox.className = 'about'
+//     var boughtBox = document.createElement('div');
+//     boughtBox.className= 'stuff';
+//     boughtBox.innerHTML= data[i].product;
+//     boughtBox.addEventListener('click', showMe);
+
+//     var aboutBox = document.createElement('a');
+//     aboutBox.className = 'aboutIt';
+//     aboutBox.innerHTML=data[i].description;
+
+//     var priceBox = document.createElement('div');
+//     priceBox.className = 'dollar'
+//     priceBox.innerHTML = data[i].price;
 //     aboutBox.innerHTML = data[i].description;
+
+
+    
+//     order.appendChild(boughtBox);
 //     order.appendChild(aboutBox);
+//     order.appendChild(priceBox);
+
+   
 // }
 
-function showMe(){
-console.log(this.innerHTML)
+// // for(var i=0;i<data.length;i++){
+// //     var aboutBox = document.createElement('a');
+// //     aboutBox.className = 'aboutIt';
+// //     aboutBox.innerHTML=data[i].description;
+// //     order.appendChild(aboutBox);
+// // }
 
-}
+
+
+//     var priceBox = document.createElement('div');
+//     priceBox.className = 'dollar'
+//     priceBox.innerHTML = data[i].price;
+//     aboutBox.innerHTML = data[i].description;
+//     order.appendChild(aboutBox);
+//     order.appendChild(priceBox);
+
+
+
+
+
+
+// function showMe(){
+// console.log(whereAbout)
+// var poof = this.querySelectorAll('.stuff')[0];
+
+// console.log(poof);

@@ -19,10 +19,17 @@
     width:100px;
 }
 
-.stuff{
+.item{
     font-weight: bold;
+    border: 1px solid black;
 }
 
-.aboutIt{
-    /* display:none; */
+.about{
+    font-weight: normal;
+}
+
+.howMuch{
+    font-weight:normal;
+    font-size: 20px;
+    text-align: right;
 }
