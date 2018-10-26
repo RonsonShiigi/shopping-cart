@@ -18,3 +18,11 @@
     height:100px;
     width:100px;
 }
+
+.stuff{
+    font-weight: bold;
+}
+
+.aboutIt{
+    /* display:none; */
+}

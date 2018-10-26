@@ -5,6 +5,25 @@ for(var i=0; i<data.length; i++){
     var boughtBox = document.createElement('div');
     boughtBox.className= 'stuff';
     boughtBox.innerHTML= data[i].product;
-    order.appendChild(boughtBox);
+    boughtBox.addEventListener('click', showMe);
+    var aboutBox = document.createElement('div');
+    aboutBox.className = 'aboutIt'
+    var priceBox = document.createElement('div');
+    priceBox.className = 'dollar'
+    priceBox.innerHTML = data[i].price;
+    aboutBox.innerHTML = data[i].description;
+    order.appendChild(boughtBox);order.appendChild(aboutBox);
+    order.appendChild(priceBox);
 }
 
+// for(var i=0; i<data.length; i++){
+//     var aboutBox = document.createElement('div');
+//     aboutBox.className = 'about'
+//     aboutBox.innerHTML = data[i].description;
+//     order.appendChild(aboutBox);
+// }
+
+function showMe(){
+console.log(this.innerHTML)
+
+}
