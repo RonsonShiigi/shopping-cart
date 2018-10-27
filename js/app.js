@@ -6,6 +6,8 @@ var data = [{product: "Finger Toothbrush", description: "A helping hand to a nic
 
 
 
+
+
 for(var i=0; i<data.length; i++){
     var itemVar = document.createElement('div');
     itemVar.className = 'item';
@@ -16,6 +18,12 @@ for(var i=0; i<data.length; i++){
 
 var go = document.getElementsByClassName('item');
 
+for(var i=0; i<data.length; i++){
+    var imgVar = document.createElement('img');
+    imgVar.className = 'photos';
+    imgVar.src = data[i].imgUrl;
+    go[i].appendChild(imgVar);
+}
 // console.log(go);
 
 for(var i=0; i<data.length; i++){
