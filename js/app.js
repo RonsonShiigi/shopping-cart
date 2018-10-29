@@ -3,27 +3,33 @@ var data = [{product: "Finger Toothbrush", description: "A helping hand to a nic
 
 
 
+for(var i=0;i<data.length; i++){
+    var smallBox = document.createElement('div');
+    smallBox.className='outer';
+    orderBox.appendChild(smallBox)
+}
 
+var hi = document.getElementsByClassName('outer');
 
-
+for(var i=0; i<data.length; i++){
+    var imgVar = document.createElement('img');
+    imgVar.className = 'photos';
+    imgVar.src = data[i].imgUrl;
+    hi[i].appendChild(imgVar);
+}
 
 
 for(var i=0; i<data.length; i++){
     var itemVar = document.createElement('div');
     itemVar.className = 'item';
     itemVar.innerHTML = data[i].product;
-    orderBox.appendChild(itemVar);
+    hi[i].appendChild(itemVar);
 
 }
 
-var go = document.getElementsByClassName('item');
+var it = document.getElementsByClassName('item');
 
-for(var i=0; i<data.length; i++){
-    var imgVar = document.createElement('img');
-    imgVar.className = 'photos';
-    imgVar.src = data[i].imgUrl;
-    go[i].appendChild(imgVar);
-}
+
 // console.log(go);
 
 for(var i=0; i<data.length; i++){
@@ -31,15 +37,40 @@ for(var i=0; i<data.length; i++){
     aboutVar.className= 'about';
     aboutVar.innerHTML = data[i].description;
     // console.log(aboutVar)
-    go[i].appendChild(aboutVar);
+    it[i].appendChild(aboutVar);
 }
 
 for(var i=0; i<data.length; i++){
     var pVar= document.createElement('div');
     pVar.className= 'howMuch';
     pVar.innerHTML=data[i].price;
-   go[i].appendChild(pVar);
+   hi[i].appendChild(pVar);
 }
+//getting subtotal
+var cost = [];
+for(var i =0; i<data.length; i++){
+ cost.push(data[i].price)
+}
+
+function total(cost){
+    var s = 0;
+    for(var i=0; i<cost.length; i++){
+        s = s + cost[i]
+    }
+    var jah = document.getElementById('subtotal')
+
+var totalVar = document.createElement('div');
+totalVar.className= 'chaChing';
+totalVar.innerHTML = s;
+jah.appendChild(totalVar);
+}
+total(cost);
+
+
+
+
+
+
 
 
 

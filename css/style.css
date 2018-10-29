@@ -16,30 +16,61 @@
 }
 #box{
     width:75%;
+    margin-top:7%;
     margin-left:auto;
     margin-right:auto;
+    border-top: 1px solid gray;
+    border-bottom:1px solid gray;
 }
-#thumbBrush{
-    height:100px;
-    width:100px;
+.outer{
+    border: 1px solid black;
+}
+.photos{
+    position: relative;
+    height:95px;
+    width:95px;
+    margin-right:120%;
+    
+   
+   
+    
 }
 
 .item{
+    font-size:24px;
+    text-align: left;
     font-weight: bold;
-    border: 1px solid black;
+   
+    /* border-top: 1px solid gray;
+    border-bottom: 1px solid gray; */
+    position: relative;
+    padding:50px;
+    margin-left:20%;
+    margin-top:-10%;
+        
+    
+    
+    
+    
 }
 
 .about{
+    
     font-weight: normal;
+    font-size:18px;
+    position: relative;
+    border: 1px solid black;
+    margin-right: 20%;
+    
 }
 
 .howMuch{
     font-weight:normal;
-    font-size: 20px;
+    font-size: 24px;
     text-align: right;
 }
 
-.photos{
-    height:100px;
-    width:100 px;
+#subtotal{
+    font-size: 24px;
+    font-weight: bold;
 }
