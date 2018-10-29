@@ -60,10 +60,8 @@
     
     font-weight: normal;
     font-size:14px;
-    position: relative;
-    border: 1px solid black;
     margin-right: 20%;
-    display: none;
+    color: white;
     
 }
 
@@ -71,12 +69,23 @@
     font-weight:normal;
     font-size: 24px;
     text-align: right;
-    border: 1px solid green;
     margin-top: -12%;
     margin-left: 50%;
+    
 }
 
 #subtotal{
+    width:65%;
     font-size: 24px;
     font-weight: bold;
+    
+    
+    margin-left: 20%;
+}
+
+.chaChing{
+    
+   
+    text-align:right;
+    margin-top: -3%;
 }

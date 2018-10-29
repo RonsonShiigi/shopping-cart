@@ -39,10 +39,10 @@ for(var i=0; i<data.length; i++){
 
 function fiyah(){
     var boom = this.querySelectorAll('.about')[0];
-    if(boom.style.display === 'block'){
-        boom.style.display ='none';
+    if(boom.style.color === 'white'){
+        boom.style.color ='black';
     } else{
-        boom.style.display = 'block';}
+        boom.style.color = 'white';}
 }
 
 // var it = document.getElementsByClassName('item');
