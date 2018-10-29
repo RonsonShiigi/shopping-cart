@@ -65,7 +65,7 @@ function fiyah(){
 for(var i=0; i<data.length; i++){
     var pVar= document.createElement('div');
     pVar.className= 'howMuch';
-    pVar.innerHTML=data[i].price;
+    pVar.innerHTML="$" + data[i].price;
    hi[i].appendChild(pVar);
 }
 //getting subtotal
@@ -83,7 +83,7 @@ function total(cost){
 
 var totalVar = document.createElement('div');
 totalVar.className= 'chaChing';
-totalVar.innerHTML = s;
+totalVar.innerHTML = '$' + s;
 jah.appendChild(totalVar);
 }
 total(cost);
