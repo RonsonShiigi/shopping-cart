@@ -23,22 +23,44 @@ for(var i=0; i<data.length; i++){
     var itemVar = document.createElement('div');
     itemVar.className = 'item';
     itemVar.innerHTML = data[i].product;
+    itemVar.addEventListener('click',fiyah)
+    
     hi[i].appendChild(itemVar);
+    var it = document.getElementsByClassName('item');
+
+    var aboutVar = document.createElement('div');
+    aboutVar.className= 'about';
+    aboutVar.innerHTML = data[i].description;
+    
+    it[i].appendChild(aboutVar);
+
 
 }
 
-var it = document.getElementsByClassName('item');
+function fiyah(){
+    var boom = this.querySelectorAll('.about')[0];
+    if(boom.style.display === 'block'){
+        boom.style.display ='none';
+    } else{
+        boom.style.display = 'block';}
+}
+
+// var it = document.getElementsByClassName('item');
 
 
 // console.log(go);
 
-for(var i=0; i<data.length; i++){
-    var aboutVar = document.createElement('div');
-    aboutVar.className= 'about';
-    aboutVar.innerHTML = data[i].description;
-    // console.log(aboutVar)
-    it[i].appendChild(aboutVar);
-}
+// for(var i=0; i<data.length; i++){
+//     var aboutVar = document.createElement('div');
+//     aboutVar.className= 'about';
+//     aboutVar.innerHTML = data[i].description;
+    
+//     it[i].appendChild(aboutVar);
+// }
+
+
+
+
 
 for(var i=0; i<data.length; i++){
     var pVar= document.createElement('div');
@@ -67,7 +89,7 @@ jah.appendChild(totalVar);
 total(cost);
 
 
-
+    
 
 
 
